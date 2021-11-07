@@ -1,0 +1,57 @@
+<br>
+<br>
+<div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+
+  <mat-card class="box">
+    <mat-card-header *ngIf="!isLoggedIn" >
+      <mat-card-title>Log in</mat-card-title>
+    </mat-card-header>
+
+    <form [formGroup]="form" *ngIf="!isLoggedIn" (ngSubmit)="form.valid && onSubmit()" novalidate> 
+    <mat-card-content>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Email" formControlName="username">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="password" formControlName="password">
+        </mat-form-field>
+      </mat-card-content>
+      <button mat-stroked-button color="accent" class="btn-block">Log in</button>
+      <div class="form-group">
+        <p class="text-center">
+					<span>or</span>			
+				</p>
+				<p class="social-login text-center">
+          <span for="lastname">Sign in with:
+            <a href="{{ googleURL }}" class="ml-2">
+              <img alt="Login with Google" src="/assets/img/google.png" class="btn-img">
+            </a>
+          </span>
+					
+				</p>
+			</div>
+      <div class="alert alert-danger" *ngIf="isLoginFailed">Login failed : {{ errorMessage }}</div>
+    </form>
+
+	<!--form #userForm="ngForm" (ngSubmit)="addUserRole(userForm)">
+		  <div class="form-group">
+			<label for="role">Role</label>
+			<select name="role" ngModel name="role" class="form-control"
+					id="role">
+				<option value="" hidden selected>Select your role</option>
+				<option value="ROLE_CLIENT">Role client</option>
+				<option value="ROLE_SELLER">Role seller</option>
+
+			</select>
+		</div>
+
+        <br>
+		<div class="button-wrapper">
+			<button mat-flat-button class="btn btn-secondary">Cancel</button>
+			<button mat-flat-button type="submit" color="primary">Start</button>
+		</div>
+	</form-->
+  </mat-card>
+
+</div>

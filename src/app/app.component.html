@@ -1,0 +1,22 @@
+<mat-toolbar color="primary">
+	<mat-toolbar-row>
+		<div>
+			<a mat-button [routerLink]="'/products'" *ngIf="isLoggedIn"> Products </a>
+			<a mat-button [routerLink]="'/orders'" *ngIf="isLoggedIn"> Orders </a>
+		</div>
+	    <div  style="float: left">
+			<a mat-button [routerLink]="'/login'" *ngIf="!isLoggedIn"> Login </a>
+			<a mat-button [routerLink]="'/profile'" *ngIf="isLoggedIn"> {{ username }} </a>
+			<button mat-button  *ngIf="isLoggedIn" (click)="logout()">
+				<mat-icon>exit_to_app</mat-icon>
+					  Logout
+		</button>  
+		  </div>
+</mat-toolbar-row>
+ </mat-toolbar>
+<br>
+<br>
+
+<div class="container-fluid">
+	<router-outlet></router-outlet>
+</div>
