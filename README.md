@@ -1,9 +1,23 @@
-# Spring Boot 2 + Angular 10: User Registration and Login using JWT Authentication, OAuth2 Social Login with Facebook, Google, LinkedIn, and Github using Spring Security 5 and Two Factor Authentication (2FA)
+# E-Commerce App
+-----
 
-[Creating Backend - Spring REST API - Part 1](https://www.javachinna.com/spring-boot-angular-two-factor-authentication/)
+Spring Security, Spring Boot, java 8, H2, Angular 11
 
-[Creating Backend - Spring REST API - Part 2](https://www.javachinna.com/2020/10/23/spring-boot-angular-10-user-registration-oauth2-social-login-part-2/)
+# Build
+-----
 
-[Creating Angular 10 Client Application - Part 3](https://www.javachinna.com/2020/10/28/spring-boot-angular-10-user-registration-oauth2-social-login-part-3/)
+1. Clone this repo
 
-[Secure Spring Boot Angular Application with Two Factor Authentication](https://www.javachinna.com/spring-boot-angular-two-factor-authentication/)
+2. Open the directory product-manager
+
+3. Open Powershell
+
+4. Build the image
+
+   docker build -t e-commerce-frontend .
+   
+5. Run the image 
+
+   docker build -t e-commerce-frontend .
+
+6. Navigate to http://localhost:4200/login
